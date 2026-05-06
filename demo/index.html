@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infra Design System — Component showcase and pattern library for infrastructure interfaces.">
+  <title>Infra Design System — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand">infra<span>.</span></a>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#components">Components</a>
+        <a href="#forms">Forms</a>
+        <a href="#data">Data</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon active" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span class="handle"></span>
+        </button>
+        <button class="btn btn-account" id="btn-account">Create account</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-message animate-in">
+          <div class="badge">
+            <span class="status-dot pulse"></span>
+            Platform v4.2 — live
+          </div>
+          <h1>Deploy from Git.<br>Run closer to users.</h1>
+          <p class="hero-sub">Push your code. Infra handles builds, routing, TLS, and multi-region replication — so you ship faster with less overhead.</p>
+          <div class="cta-group">
+            <a href="#" class="btn btn-primary pill" id="cta-start">Start deploying</a>
+            <a href="#" class="btn btn-secondary pill" id="cta-docs">Documentation</a>
+          </div>
+          <p class="trust-note">No credit card required · Free tier includes 512 MB RAM</p>
+        </div>
+        <div class="animate-in delay-2">
+          <div class="terminal-card" aria-label="Terminal preview">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+              </div>
+              <span class="terminal-title">~/projects/webapp</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div><span class="dim">$</span> git push infra main</div>
+              <div class="blue">→ Building from Dockerfile...</div>
+              <div class="blue">→ Layer 1/4 — base image cached</div>
+              <div class="blue">→ Layer 2/4 — dependencies installed</div>
+              <div class="blue">→ Layer 3/4 — assets compiled</div>
+              <div class="blue">→ Layer 4/4 — image optimized (142 MB)</div>
+              <div class="green">✓ Build complete — 28s</div>
+              <div class="green">✓ Health check passed</div>
+              <div class="green">✓ TLS provisioned</div>
+              <div class="white">⟶ https://webapp.infra.app</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header animate-in">
+        <p class="section-kicker">Platform capabilities</p>
+        <h2 class="section-title">Infrastructure that stays out of the way</h2>
+        <p class="section-desc">Every tool you need to go from repository to production — built into the platform, not bolted on.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-in delay-1">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Git-native deploys</h3>
+          <p>Push to your branch and the platform builds, tests, and deploys. Zero pipeline config required.</p>
+        </div>
+        <div class="feature-card animate-in delay-2">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Multi-region routing</h3>
+          <p>Deploy replicas across six global regions. Requests are routed to the nearest healthy instance automatically.</p>
+        </div>
+        <div class="feature-card animate-in delay-3">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Automatic TLS</h3>
+          <p>Every deploy gets a valid certificate. Custom domains are supported with zero-downtime renewal.</p>
+        </div>
+        <div class="feature-card animate-in delay-4">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Built-in observability</h3>
+          <p>Real-time CPU, RAM, and request metrics. Structured logs with full-text search and configurable retention.</p>
+        </div>
+        <div class="feature-card animate-in delay-1">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Access controls</h3>
+          <p>Team roles, deploy tokens, and IP allowlists. Scope permissions per service or environment.</p>
+        </div>
+        <div class="feature-card animate-in delay-2">
+          <div class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Container-first</h3>
+          <p>Bring a Dockerfile or let the platform detect your stack. Supports Node, Python, Go, Rust, and static sites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPONENTS ==================== -->
+  <section class="section" id="components">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-kicker">Component library</p>
+        <h2 class="section-title">Design system components</h2>
+        <p class="section-desc">Core building blocks used across the platform interface and marketing surfaces.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" id="tab-buttons" data-target="panel-buttons">Buttons</button>
+        <button class="tab" role="tab" id="tab-badges" data-target="panel-badges">Badges</button>
+        <button class="tab" role="tab" id="tab-cards" data-target="panel-cards">Cards & panels</button>
+        <button class="tab" role="tab" id="tab-terminal" data-target="panel-terminal">Terminal</button>
+      </div>
+
+      <!-- Buttons panel -->
+      <div class="tab-panel" id="panel-buttons">
+        <div class="showcase-grid">
+          <div class="showcase-block">
+            <h3>App buttons</h3>
+            <div class="showcase-row">
+              <button class="btn btn-primary" id="demo-btn-primary">Deploy service</button>
+              <button class="btn btn-secondary" id="demo-btn-secondary">View logs</button>
+              <button class="btn btn-destructive" id="demo-btn-delete">Delete</button>
+            </div>
+            <div class="showcase-row">
+              <button class="btn btn-primary" disabled>Deploying…</button>
+              <button class="btn btn-secondary" disabled>Disabled</button>
+            </div>
+          </div>
+          <div class="showcase-block">
+            <h3>Marketing buttons</h3>
+            <div class="showcase-row">
+              <a href="#" class="btn btn-primary pill">Start deploying</a>
+              <a href="#" class="btn btn-secondary pill">View pricing</a>
+            </div>
+            <div class="showcase-row">
+              <button class="btn btn-account">Create account</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges panel -->
+      <div class="tab-panel" id="panel-badges" style="display:none">
+        <div class="showcase-grid">
+          <div class="showcase-block">
+            <h3>Status badges</h3>
+            <div class="showcase-row">
+              <span class="badge"><span class="status-dot pulse"></span>Live</span>
+              <span class="badge"><span class="status-dot"></span>Healthy</span>
+              <span class="badge"><span class="status-dot warning"></span>Degraded</span>
+              <span class="badge"><span class="status-dot destructive"></span>Down</span>
+            </div>
+          </div>
+          <div class="showcase-block">
+            <h3>Info badges</h3>
+            <div class="showcase-row">
+              <span class="badge">v4.2.0</span>
+              <span class="badge">us-east-1</span>
+              <span class="badge">3 replicas</span>
+              <span class="badge">Node 20 LTS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards panel -->
+      <div class="tab-panel" id="panel-cards" style="display:none">
+        <div class="showcase-grid">
+          <div class="showcase-block">
+            <h3>App card</h3>
+            <div class="app-card">
+              <h4>webapp-prod</h4>
+              <p style="color:var(--muted-foreground);font-size:.875rem;margin-bottom:12px">Last deployed 4 minutes ago · us-east-1</p>
+              <div class="showcase-row">
+                <span class="badge"><span class="status-dot pulse"></span>Running</span>
+                <span class="badge">2 replicas</span>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-block">
+            <h3>Info panels</h3>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div class="info-panel success">
+                <strong>Deploy successful.</strong> 3 instances are healthy across 2 regions.
+              </div>
+              <div class="info-panel warning">
+                <strong>High memory usage.</strong> Service is at 87% RAM — consider scaling up.
+              </div>
+              <div class="info-panel destructive">
+                <strong>Health check failing.</strong> 2 of 3 replicas returned 503 in the last 60 seconds.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terminal panel -->
+      <div class="tab-panel" id="panel-terminal" style="display:none">
+        <div class="showcase-grid">
+          <div class="showcase-block">
+            <h3>Terminal surface</h3>
+            <div class="terminal-card" style="max-width:100%">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="red"></span><span class="yellow"></span><span class="green"></span>
+                </div>
+                <span class="terminal-title">build log</span>
+              </div>
+              <div class="terminal-body" style="min-height:auto">
+                <div><span class="dim">[09:14:02]</span> <span class="blue">Installing dependencies...</span></div>
+                <div><span class="dim">[09:14:18]</span> added 342 packages in 16s</div>
+                <div><span class="dim">[09:14:19]</span> <span class="blue">Compiling TypeScript...</span></div>
+                <div><span class="dim">[09:14:24]</span> <span class="green">✓ Compiled successfully</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-block">
+            <h3>Logs surface</h3>
+            <div class="logs-card">
+              <div class="log-line"><span class="log-ts">09:14:31.204</span><span class="log-msg">HTTP GET /api/health → 200 (4ms)</span></div>
+              <div class="log-line"><span class="log-ts">09:14:31.891</span><span class="log-msg ok">Service registered in us-east-1</span></div>
+              <div class="log-line"><span class="log-ts">09:14:32.105</span><span class="log-msg">HTTP GET /api/status → 200 (2ms)</span></div>
+              <div class="log-line"><span class="log-ts">09:14:33.447</span><span class="log-msg">HTTP POST /api/deploy → 201 (340ms)</span></div>
+              <div class="log-line"><span class="log-ts">09:14:34.002</span><span class="log-msg ok">Build artifact uploaded (14.2 MB)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FORMS ==================== -->
+  <section class="section" id="forms">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-kicker">Form controls</p>
+        <h2 class="section-title">Inputs and controls</h2>
+        <p class="section-desc">Form elements styled for both dense product interfaces and comfortable marketing flows.</p>
+      </div>
+      <div class="showcase-grid">
+        <div class="showcase-block">
+          <h3>Text inputs</h3>
+          <div class="form-group">
+            <label class="form-label" for="input-name">Service name</label>
+            <input type="text" class="input-field focus-ring" id="input-name" placeholder="e.g. webapp-prod">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-domain">Custom domain</label>
+            <input type="text" class="input-field focus-ring" id="input-domain" placeholder="app.example.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="input-disabled">Locked field</label>
+            <input type="text" class="input-field" id="input-disabled" value="production" disabled style="opacity:.55;cursor:not-allowed">
+          </div>
+        </div>
+        <div class="showcase-block">
+          <h3>Specialized inputs</h3>
+          <div class="form-group">
+            <label class="form-label" for="input-ram">Memory allocation</label>
+            <div class="number-input-group">
+              <input type="number" class="input-field focus-ring" id="input-ram" value="512" min="128" max="8192" step="128">
+              <span class="suffix">MB RAM</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="select-region">Region</label>
+            <div class="select-wrapper">
+              <select class="select-trigger focus-ring" id="select-region">
+                <option>us-east-1 (Virginia)</option>
+                <option>us-west-2 (Oregon)</option>
+                <option>eu-west-1 (Ireland)</option>
+                <option>ap-south-1 (Mumbai)</option>
+                <option>ap-northeast-1 (Tokyo)</option>
+              </select>
+              <svg class="select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="range-cpu">CPU allocation — <span id="cpu-value" class="font-mono">1.0</span> vCPU</label>
+            <input type="range" class="range-input" id="range-cpu" min="0.25" max="4" step="0.25" value="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="range-replicas">Replicas — <span id="replica-value" class="font-mono">2</span></label>
+            <input type="range" class="range-input" id="range-replicas" min="1" max="10" step="1" value="2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DATA TABLE ==================== -->
+  <section class="section" id="data">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-kicker">Data display</p>
+        <h2 class="section-title">Tables and data surfaces</h2>
+        <p class="section-desc">Structured data patterns for pricing grids, resource inventories, and operational dashboards.</p>
+      </div>
+      <div class="data-table" role="table" aria-label="Resource pricing">
+        <div class="table-header" role="row">
+          <span role="columnheader">Resource</span>
+          <span role="columnheader">Rate</span>
+          <span role="columnheader">Billing</span>
+          <span role="columnheader">Details</span>
+        </div>
+        <div class="table-row" role="row">
+          <span role="cell"><strong>CPU</strong></span>
+          <span role="cell" class="mono">$0.0463 / hr</span>
+          <span role="cell">Per vCPU</span>
+          <span role="cell" style="color:var(--muted-foreground)">Shared or dedicated. Billed per second after first minute.</span>
+        </div>
+        <div class="table-row" role="row">
+          <span role="cell"><strong>RAM</strong></span>
+          <span role="cell" class="mono">$0.0058 / hr</span>
+          <span role="cell">Per GB</span>
+          <span role="cell" style="color:var(--muted-foreground)">512 MB minimum. Free tier includes 512 MB per service.</span>
+        </div>
+        <div class="table-row" role="row">
+          <span role="cell"><strong>Bandwidth</strong></span>
+          <span role="cell" class="mono">$0.10 / GB</span>
+          <span role="cell">Per GB out</span>
+          <span role="cell" style="color:var(--muted-foreground)">First 100 GB free each month. Ingress is always free.</span>
+        </div>
+        <div class="table-row" role="row">
+          <span role="cell"><strong>Storage</strong></span>
+          <span role="cell" class="mono">$0.25 / GB</span>
+          <span role="cell">Per GB / mo</span>
+          <span role="cell" style="color:var(--muted-foreground)">Persistent volumes. Snapshots billed separately at $0.05/GB.</span>
+        </div>
+        <div class="table-row" role="row">
+          <span role="cell"><strong>Build minutes</strong></span>
+          <span role="cell" class="mono">$0.005 / min</span>
+          <span role="cell">Per minute</span>
+          <span role="cell" style="color:var(--muted-foreground)">500 free minutes/month. Cached layers reduce build time.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING SUMMARY ==================== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-kicker">Cost calculator</p>
+        <h2 class="section-title">Estimate your monthly bill</h2>
+        <p class="section-desc">Transparent, usage-based pricing. No hidden fees.</p>
+      </div>
+      <div class="showcase-grid">
+        <div class="showcase-block" style="gap:20px">
+          <div class="form-group">
+            <label class="form-label" for="calc-cpu">CPU — <span id="calc-cpu-val" class="font-mono">2</span> vCPU</label>
+            <input type="range" class="range-input" id="calc-cpu" min="0.5" max="8" step="0.5" value="2">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="calc-ram">RAM — <span id="calc-ram-val" class="font-mono">2</span> GB</label>
+            <input type="range" class="range-input" id="calc-ram" min="0.5" max="16" step="0.5" value="2">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="calc-replicas">Replicas — <span id="calc-replicas-val" class="font-mono">2</span></label>
+            <input type="range" class="range-input" id="calc-replicas" min="1" max="10" step="1" value="2">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="calc-hours">Hours / month — <span id="calc-hours-val" class="font-mono">730</span></label>
+            <input type="range" class="range-input" id="calc-hours" min="100" max="730" step="10" value="730">
+          </div>
+        </div>
+        <div class="showcase-block">
+          <h3>Estimated bill</h3>
+          <div class="app-card" style="display:flex;flex-direction:column;gap:16px">
+            <div style="font-size:2.5rem;font-weight:300;letter-spacing:-0.02em;font-family:'Geist Mono',monospace" id="calc-total">$101.82</div>
+            <div style="font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-foreground);font-weight:700">Per month</div>
+            <div style="border-top:1px solid var(--border);padding-top:16px;display:flex;flex-direction:column;gap:8px">
+              <div style="display:flex;justify-content:space-between;font-size:.875rem">
+                <span style="color:var(--muted-foreground)">CPU</span>
+                <span class="font-mono" id="calc-cpu-cost">$67.58</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.875rem">
+                <span style="color:var(--muted-foreground)">RAM</span>
+                <span class="font-mono" id="calc-ram-cost">$8.47</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.875rem">
+                <span style="color:var(--muted-foreground)">Replicas</span>
+                <span class="font-mono" id="calc-replicas-note">×2</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.875rem">
+                <span style="color:var(--muted-foreground)">Bandwidth (est.)</span>
+                <span class="font-mono">$10.00</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;font-size:.875rem">
+                <span style="color:var(--muted-foreground)">Build minutes (est.)</span>
+                <span class="font-mono">$2.50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">infra<span>.</span></a>
+          <p>Infrastructure that stays out of the way. Deploy containers from Git with automatic TLS, multi-region routing, and usage-based pricing.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Changelog</a>
+          <a href="#">Status</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">API reference</a>
+          <a href="#">Guides</a>
+          <a href="#">Community</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Infra. All rights reserved.</span>
+        <span>Terms · Privacy · Security</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
